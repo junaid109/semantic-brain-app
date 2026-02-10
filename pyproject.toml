@@ -1,0 +1,23 @@
+[project]
+name = "semantic-brain"
+version = "0.1.0"
+description = "Enterprise Search with RAG and Semantic Graph"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "autogen-agentchat>=0.2.0",
+    "autogen-ext[magentic-one]>=0.2.0",
+    "neo4j>=5.16.0",
+    "pydantic-settings>=2.1.0",
+    "python-multipart>=0.0.6",
+    "httpx>=0.26.0",
+    "loguru>=0.7.2",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["api*", "agents*", "config*"]
